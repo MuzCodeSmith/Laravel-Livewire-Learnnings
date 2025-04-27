@@ -12,4 +12,8 @@ class Posts extends Component
         $posts = Post::paginate(10);
         return view('livewire.posts',['posts'=>$posts]);
     }
+
+    public function deletePost($id){
+        Post::destroy($id);
+    }
 }
