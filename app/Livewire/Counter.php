@@ -6,7 +6,10 @@ use Livewire\Component;
 
 class Counter extends Component
 {
-    public $name = "Muzaffar Shaikh";
+    public $count = 0;
+    public function increase(){
+        $this->count++;
+    }
     public function render()
     {
         return view('livewire.counter');
